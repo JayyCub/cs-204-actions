@@ -39,10 +39,10 @@ public class Calculator {
     .
     etc
      */
-    int fibonacciNumberFinder(int n){
-        HashMap<Integer, Integer> vals = new HashMap<Integer, Integer>();
-        vals.put(0, 0);
-        vals.put(1, 1);
+    Long fibonacciNumberFinder(int n){
+        HashMap<Integer, Long> vals = new HashMap<Integer, Long>();
+        vals.put(0, 0L);
+        vals.put(1, 1L);
         for (int i=1; i<n; i++) {
             vals.put(vals.size(), vals.get(i) + vals.get(i-1));
         }
