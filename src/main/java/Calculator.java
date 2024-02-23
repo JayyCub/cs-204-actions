@@ -1,4 +1,6 @@
-// Changing this comment to make new push.
+import java.util.HashMap;
+import java.util.UUID;
+
 class Calculator {
 
     Calculator(){
@@ -38,7 +40,14 @@ class Calculator {
     etc
      */
     int fibonacciNumberFinder(int n){
-        return 0;
+        HashMap<Integer, Integer> vals = new HashMap<Integer, Integer>();
+        vals.put(0, 0);
+        vals.put(1, 1);
+        for (int i=1; i<n; i++) {
+            vals.put(vals.size(), vals.get(i) + vals.get(i-1));
+        }
+
+        return vals.get(n);
     }
 
 
@@ -50,7 +59,7 @@ class Calculator {
     if int a = 16 then this method returns: 10000
      */
     String intToBinaryNumber(int number){
-        return null;
+        return Integer.toBinaryString(number);
     }
 
     /*
@@ -62,7 +71,7 @@ class Calculator {
     if you run this function twice with the same String input, it must return 2 unique String IDs
      */
     String createUniqueID(String n){
-        return null;
+        return n + UUID.randomUUID();
     }
 
 
